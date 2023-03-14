@@ -124,7 +124,9 @@ function nekolib:window(bind)
         TextBox.TextSize = 14.000
         TextButton.Text = title
         UICorner_2.Parent = TextBox
-    TextButton.MouseButton1Down:Connect(callback)
+    TextButton.MouseButton1Down:Connect(function()
+            callback(TextBox.Text)
+     end)
     end
     function section:button(title,callback)
         local UICorner = Instance.new("UICorner")
