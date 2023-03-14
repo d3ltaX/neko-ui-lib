@@ -77,9 +77,7 @@ function nekolib:window(bind)
                 callback(toggled)
             end)
         end
-        return section
-    end
-    function section:minisection(title)
+        function section:minisection(title)
         local TextLabel = Instance.new("TextLabel")
 
 
@@ -145,6 +143,8 @@ function nekolib:window(bind)
         ToggleButton.MouseButton1Down:Connect(callback)
         UICorner.Parent = ToggleButton
     end
+        return section
+    end
     return window
-end
+    end
 return nekolib
